@@ -168,7 +168,7 @@ class ganUpdater(chainer.training.StandardUpdater):
 
         for i in range(batchsize):
             x_in[i, :] = xp.asarray(batch[i][0])
-            t_out[i, :] = xp.asarray(batch[i][1])
+            t_out[i, 0,:] = xp.asarray(batch[i][1])
         x_in = Variable(x_in)
         t_out = Variable(t_out)
 
